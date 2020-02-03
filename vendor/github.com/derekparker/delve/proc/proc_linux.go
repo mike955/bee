@@ -18,8 +18,8 @@ import (
 
 	sys "golang.org/x/sys/unix"
 
-	"github.com/derekparker/delve/dwarf/frame"
-	"github.com/derekparker/delve/dwarf/line"
+	"github.com/go-delve/delve/dwarf/frame"
+	"github.com/go-delve/delve/dwarf/line"
 	"golang.org/x/debug/elf"
 )
 
@@ -31,7 +31,7 @@ const (
 	StatusZombie    = 'Z'
 
 	// Kernel 2.6 has TraceStop as T
-	// TODO(derekparker) Since this means something different based on the
+	// TODO(go-delve) Since this means something different based on the
 	// version of the kernel ('T' is job control stop on modern 3.x+ kernels) we
 	// may want to differentiate at some point.
 	StatusTraceStopT = 'T'
